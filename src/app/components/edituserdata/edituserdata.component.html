@@ -1,0 +1,45 @@
+<h2 mat-dialog-title>Edit Data</h2>
+<mat-dialog-content class="mat-typography">
+
+    <mat-form-field class="example-full-width" [style.width.px]=227>
+        <mat-label>First Name</mat-label>
+        <input matInput placeholder="John"   [(ngModel)]="firstname" >
+      </mat-form-field><br>
+  
+
+      <mat-form-field class="example-full-width" [style.width.px]=227>
+        <mat-label>Last Name</mat-label>
+        <input matInput placeholder="John"   [(ngModel)]="lastname">
+      </mat-form-field><br>
+
+      <mat-form-field class="example-full-width" [style.width.px]=327>
+        <mat-label>Email</mat-label>
+        <input matInput placeholder="John"   [(ngModel)]="email">
+      </mat-form-field><br>
+
+      <mat-form-field class="example-full-width" [style.width.px]=327>
+        <mat-label>Phone Number</mat-label>
+        <input matInput placeholder="John"   [(ngModel)]="phone">
+      </mat-form-field><br>
+
+
+
+    
+      <mat-form-field class="example-full-width" [style.width.px]=327>
+        <mat-label>Adddress</mat-label>
+        <textarea matInput placeholder="Ex. It makes me feel..." [(ngModel)]="address"></textarea>
+      </mat-form-field><br>
+
+      <mat-form-field  [style.width.px]=327>
+        <mat-label>Requirements</mat-label>
+        <mat-select  multiple [(ngModel)]="requirements" >
+          <mat-option *ngFor="let topping of toppingList" [value]="topping">{{topping}}</mat-option>
+        </mat-select>
+      </mat-form-field><br>
+ 
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-raised-button color="primary" cdkFocusInitial (click)="editUser()">Update</button>
+  <button mat-raised-button color="primary" mat-dialog-close>Cancel</button>
+
+</mat-dialog-actions>

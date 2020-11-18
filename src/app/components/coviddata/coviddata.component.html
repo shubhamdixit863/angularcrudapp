@@ -1,0 +1,56 @@
+<div class="row" style="margin-top: 30px;">
+  
+<div class="col-md-4 col-md-offset-4">
+  <span> <img src="https://img.icons8.com/doodle/48/000000/social-distancing.png"/> <h2 style='display:inline; margin-left: 3px;'>Covid-19 Patients Data </h2></span>
+  
+ 
+</div>
+    <div class="col-md-6 col-md-offset-4" style="margin-top: 20px;">
+      
+            <mat-form-field class="example-full-width" [style.width.px]=227>
+              <mat-label>First Name</mat-label>
+              <input matInput placeholder="John"   [(ngModel)]="firstname">
+            </mat-form-field>
+            <span style="margin-left:5px">  </span>
+
+            <mat-form-field class="example-full-width" [style.width.px]=227>
+              <mat-label>Last Name</mat-label>
+              <input matInput placeholder="John"   [(ngModel)]="lastname">
+            </mat-form-field><br>
+
+            <mat-form-field class="example-full-width" [style.width.px]=327>
+              <mat-label>Email</mat-label>
+              <input matInput placeholder="John"   [(ngModel)]="email">
+            </mat-form-field><br>
+
+            <mat-form-field class="example-full-width" [style.width.px]=327>
+              <mat-label>Phone Number</mat-label>
+              <input matInput placeholder="John"   [(ngModel)]="phone">
+            </mat-form-field><br>
+
+
+
+          
+            <mat-form-field class="example-full-width" [style.width.px]=327>
+              <mat-label>Adddress</mat-label>
+              <textarea matInput placeholder="Ex. It makes me feel..." [(ngModel)]="address"></textarea>
+            </mat-form-field><br>
+
+            <mat-form-field  [style.width.px]=327>
+              <mat-label>Requirements</mat-label>
+              <mat-select  multiple [(ngModel)]="requirements" >
+                <mat-option *ngFor="let topping of toppingList" [value]="topping">{{topping}}</mat-option>
+              </mat-select>
+            </mat-form-field><br>
+
+
+
+            <button mat-raised-button color="primary" (click)="saveData()">Enter Data</button>
+          
+    </div>
+
+
+
+
+
+</div>

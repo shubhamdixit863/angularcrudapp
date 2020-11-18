@@ -1,0 +1,17 @@
+table {
+    width: 100%;
+  }
+
+  td , th {
+    white-space: normal;
+    word-wrap: break-word;
+    max-width: 200px;
+}
+
+.mat-row {
+  height: auto;
+}
+
+.mat-cell {
+  padding: 18px 18px 18px 0;
+}
